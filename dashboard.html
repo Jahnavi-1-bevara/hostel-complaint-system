@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Complaints Dashboard</h1>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Room</th>
+            <th>Complaint</th>
+            <th>Status</th>
+        </tr>
+        {% for c in complaints %}
+        <tr>
+            <td>{{ c.name }}</td>
+            <td>{{ c.room }}</td>
+            <td>{{ c.complaint }}</td>
+            <td>{{ c.status }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/">Submit New Complaint</a>
+</body>
+</html>
